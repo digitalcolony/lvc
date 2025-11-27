@@ -43,4 +43,4 @@ A tribute website dedicated to Lee Van Cleef, the iconic "Prince of Villains" of
 This project is open for all to use with no restrictions.
 
 **Author**: Michael Allen Smith
-# lvc
+
