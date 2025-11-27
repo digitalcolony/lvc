@@ -249,6 +249,16 @@ footer {
     border-top: 4px solid var(--color-blood);
 }
 
+footer a {
+    color: var(--color-gold);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--color-paper);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .main-title { font-size: 3rem; }
