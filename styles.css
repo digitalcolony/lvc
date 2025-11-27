@@ -1,0 +1,276 @@
+/* Initial CSS */
+:root {
+    --color-gold: #C2B280;
+    --color-gunmetal: #2C3539;
+    --color-leather: #8B4513;
+    --color-blood: #8a0303;
+    --color-paper: #F5F5DC;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lora', serif;
+    background-color: var(--color-paper);
+    color: var(--color-gunmetal);
+    overflow-x: hidden;
+}
+
+.texture-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/western_texture.png');
+    opacity: 0.4;
+    pointer-events: none;
+    z-index: 999;
+    mix-blend-mode: multiply;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: 'Rye', serif;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.main-title {
+    font-size: 5rem;
+    color: var(--color-paper);
+    text-shadow: 4px 4px 0px var(--color-gunmetal);
+    letter-spacing: 5px;
+    line-height: 1;
+}
+
+.subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--color-gold);
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.tagline {
+    font-family: 'Lora', serif;
+    font-size: 1.2rem;
+    color: #ddd;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+.section-title {
+    font-size: 3rem;
+    color: var(--color-leather);
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid var(--color-gold);
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('assets/hero_background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    z-index: 1;
+    padding: 20px;
+    border: 4px solid var(--color-gold);
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px);
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    color: var(--color-gold);
+    font-size: 2rem;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-10px);}
+    60% {transform: translateY(-5px);}
+}
+
+/* Biography Section */
+.biography {
+    padding: 80px 20px;
+    background-color: var(--color-paper);
+    position: relative;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.bio-content p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #4a4a4a;
+}
+
+/* Roles Gallery */
+.roles-gallery {
+    padding: 60px 20px;
+    background-color: #e8e0d5; /* Slightly darker paper */
+    text-align: center;
+}
+
+.role-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 60px auto;
+    background: var(--color-paper);
+    box-shadow: 10px 10px 0px rgba(44, 53, 57, 0.2);
+    border: 1px solid var(--color-gold);
+    overflow: hidden;
+}
+
+.role-card.reverse {
+    flex-direction: row-reverse;
+}
+
+.role-image {
+    flex: 1;
+    overflow: hidden;
+}
+
+.role-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+    filter: sepia(0.3) contrast(1.1);
+}
+
+.role-card:hover .role-image img {
+    transform: scale(1.05);
+    filter: sepia(0) contrast(1.2);
+}
+
+.role-info {
+    flex: 1;
+    padding: 40px;
+    text-align: left;
+}
+
+.role-info h3 {
+    font-size: 2.5rem;
+    color: var(--color-gunmetal);
+    margin-bottom: 10px;
+}
+
+.role-film {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--color-blood);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.role-desc {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* Attributes Section */
+.attributes {
+    padding: 80px 20px;
+    background-color: var(--color-gunmetal);
+    color: var(--color-paper);
+    text-align: center;
+}
+
+.attributes .section-title {
+    color: var(--color-paper);
+    border-color: var(--color-gold);
+}
+
+.attributes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.attribute-item {
+    padding: 30px;
+    border: 2px solid var(--color-gold);
+    transition: transform 0.3s ease;
+}
+
+.attribute-item:hover {
+    transform: translateY(-10px);
+    background-color: rgba(194, 178, 128, 0.1);
+}
+
+.attribute-item h3 {
+    color: var(--color-gold);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.attribute-item p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a1a;
+    color: #666;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    border-top: 4px solid var(--color-blood);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-title { font-size: 3rem; }
+    .subtitle { font-size: 1.5rem; }
+    
+    .role-card, .role-card.reverse {
+        flex-direction: column;
+    }
+    
+    .role-info {
+        padding: 20px;
+    }
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
