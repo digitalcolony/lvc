@@ -1,6 +1,7 @@
 # Image Generation Prompts for Lee Van Cleef Tribute
 
 > **TODO:** Generate these images when image generation credits are available. Currently using placeholder images (`assets/western_texture.png`).
+> **NOTE:** The image for Ryan (*Death Rides a Horse*) needs to be regenerated. Ensure the prompt accurately reflects the movie's specific visual style.
 
 ## Illustrated Image Generation Prompt Template
 
